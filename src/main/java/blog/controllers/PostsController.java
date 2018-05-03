@@ -41,7 +41,7 @@ public class PostsController {
     @RequestMapping(value = "/posts/create", method = RequestMethod.POST)
     public String createPostPage(@Valid PostForm postForm, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            notifyService.addErrorMessage("Please the form correctly!");
+            notifyService.addErrorMessage("Please fill the form correctly!");
             return "posts/create";
         }
 

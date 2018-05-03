@@ -22,9 +22,7 @@
     <div>
         <label for="post" th:value="*{post}">Post:</label>
     </div>
-    <textarea id="post" type="text" name="post" th:value="*{post}">
-        Write a post here
-    </textarea>
+    <textarea id="post" type="text" name="post" th:value="*{post}" placeholder="Write a post here" cols="70" rows="10"></textarea>
 
     <div>
         <input type="submit" value="Post"/>

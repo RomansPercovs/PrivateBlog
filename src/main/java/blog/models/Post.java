@@ -8,13 +8,14 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
-    @Column(nullable = false, length = 300)
+    @Column(name = "TITLE", nullable = false, length = 300)
     private String title;
 
     @Lob
-    @Column(nullable = false)
+    @Column(name = "BODY", nullable = false)
     private String body;
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
